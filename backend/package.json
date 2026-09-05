@@ -1,0 +1,23 @@
+{
+  "name": "aezamine-backend",
+  "version": "1.0.0",
+  "description": "Bedrock Web Backend in pure TypeScript",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/app.js",
+    "test": "node --test dist/tests/*.test.js"
+  },
+  "keywords": [
+    "minecraft",
+    "bedrock",
+    "websocket",
+    "typescript"
+  ],
+  "author": "AézaMine Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}

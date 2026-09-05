@@ -1,0 +1,21 @@
+{
+  "name": "aezamine-frontend",
+  "version": "1.0.0",
+  "description": "Web Components Frontend in pure TypeScript",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "keywords": [
+    "minecraft",
+    "vanilla",
+    "web-components",
+    "typescript"
+  ],
+  "author": "AézaMine Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}

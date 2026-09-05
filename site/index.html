@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#1e1e1f">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title lang="title">AézaMine — Топ Сервер Майнкрафт Бедрок / Minecraft Bedrock PE</title>
+    <meta name="description" content="AézaMine — лучший международный сервер Майнкрафт Бедрок (PE). Уникальное Выживание+, мини-игры, кланы без лагов. Лучший донат, минимальный пинг и стабильный онлайн. Подключайся прямо сейчас!">
+    <meta name="keywords" content="майнкрафт бедрок сервер, сервер майнкрафт пе, скачать майнкрафт бедрок, донат майнкрафт пе, купить донат майнкрафт пе, minecraft pe survival server, aezamine.com, майнкрафт пе мониторинг, сервер майнкрафт 1.20, сервер майнкрафт 1.26, аезамайн, aeza mine, бесплатный донат майнкрафт, сервер с телефона майнкрафт, выживание с кланами майнкрафт">
+    
+    <meta property="og:title" content="AézaMine — Топ Сервер Майнкрафт Бедрок / Minecraft Bedrock PE">
+    <meta property="og:description" content="Уникальное Выживание+ на лучшем сервере Minecraft Bedrock. Стабильный онлайн, крутые мини-игры и честный донат.">
+    <meta property="og:image" content="./img/logo.png">
+    <meta property="og:url" content="https://my.aezamine.com">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="dns-prefetch" href="https://telegram.org">
+    <link rel="dns-prefetch" href="https://mc-heads.net">
+    <link rel="dns-prefetch" href="https://api.mcsrvstat.us">
+    
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./style.css?v=20">
+    <link rel="icon" href="./img/logo.png" type="image/png">
+    <script defer src="https://cdn.jsdelivr.net/npm/skinview3d@3.1.0/bundles/skinview3d.bundle.js"></script>
+    <script defer src="./app.js"></script>
+</head>
+<body>
+    <noscript>
+        <div style="padding:20px; text-align:center; color:#fff; background:#111;">
+            Для работы сайта AézaMine требуется поддержка JavaScript.
+        </div>
+    </noscript>
+
+    <div class="seo-hidden" style="display:none; position:absolute; width:1px; height:1px; overflow:hidden;">
+        <h2>Лучшие серверы Майнкрафт Бедрок ПЕ (Minecraft PE)</h2>
+        <p>Ищете где поиграть в Minecraft Bedrock Edition с телефона или ПК? Сервер АезаМайн (aezamine.com) предлагает режим Выживание+ с уникальными плагинами, мини-играми, свадьбами и кланами. Наш мониторинг серверов обновляется в реальном времени. Здесь вы можете дешево купить донат на майнкрафт пе, получить привилегии и играть без лагов.</p>
+    </div>
+
+    <div id="mc-root">
+        <canvas id="mc-particles" class="mc-particle-canvas"></canvas>
+        <div class="mc-bg-overlay"></div>
+
+        <div class="mc-form-container">
+            <header class="mc-form-header">
+                <div class="mc-form-title">
+                    <img src="./img/logo.png" alt="AézaMine Logo" class="mc-logo" width="28" height="28" fetchpriority="high">
+                    <span class="mc-brand-text">AézaMine</span>
+                </div>
+                <div class="mc-window-controls">
+                    <button id="lang-change" class="mc-btn mc-btn-small mc-btn-lang" title="Сменить язык">RU</button>
+                    <button class="mc-btn mc-btn-close" data-action="close" title="Закрыть">✕</button>
+                </div>
+            </header>
+
+            <div class="mc-form-body">
+                <nav class="mc-sidebar" aria-label="Разделы сайта">
+                    <button class="mc-tab-btn active" data-target="home" lang="info2">Главная</button>
+                    <button class="mc-tab-btn" data-target="news" lang="news_tab">Новости</button>
+                    <button class="mc-tab-btn" data-target="donate" lang="buy_title">Донат</button>
+                    <button class="mc-tab-btn" data-target="ranks-desc" lang="ranks_desc_tab">Привилегии</button>
+                    <button class="mc-tab-btn" data-target="skin-viewer" lang="skin_viewer_tab">3D Скины</button>
+                    <button class="mc-tab-btn" data-target="rules" lang="rules_tab">Правила</button>
+                    <button class="mc-tab-btn" data-target="staff" lang="staff_tab">Команда</button>
+                </nav>
+
+                <main class="mc-content">
+                    <div id="home" class="mc-pane active">
+                        <div class="mc-home-layout">
+                            <div class="mc-pane-content">
+                                <h1 class="mc-title" lang="description">Надёжный сервер<br>Майнкрафт Бедрок</h1>
+                                <p class="mc-text" lang="description2">Невероятное реально! Международный, мини-игры, выживание, кланы, свадьбы и не только на сервере АéзаМайн.</p>
+                                
+                                <div class="mc-card mc-margin-top" style="border-color: var(--mc-accent); background: linear-gradient(135deg, rgba(59,165,92,0.12), rgba(30,30,31,0.95));">
+                                    <div class="mc-status-card-inner">
+                                        <div class="mc-status-left">
+                                            <div class="mc-server-status-dot"></div>
+                                            <div>
+                                                <span class="mc-label" style="color:var(--mc-accent); letter-spacing:1px;" lang="server_status_online">🟢 СЕРВЕР ОНЛАЙН</span>
+                                                <h3 class="mc-subtitle" style="margin-top:4px; font-size:12px;" lang="server_mode_title">Выживание+</h3>
+                                            </div>
+                                        </div>
+                                        <div class="mc-status-right">
+                                            <span id="surv-online-count" class="mc-number" style="font-size:26px; margin:0; color:var(--mc-accent);">...</span>
+                                            <span class="mc-label" lang="online_server">онлайн игроков</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mc-card mc-margin-top">
+                                    <div class="mc-card-overlay">
+                                        <h2 class="mc-subtitle" lang="video_title">Много возможностей</h2>
+                                        <p class="mc-text mc-text-small" lang="video_description">120+ команд, мини-игры, играйте без задержек. 24/7 поддержка и уникальные функции, ощутите полную свободу и наслаждайтесь контентом.</p>
+                                    </div>
+                                </div>
+
+                                <div id="isp-promo" class="mc-card mc-margin-top" style="display:none;">
+                                    <h2 class="mc-subtitle" lang="isp_title">Переходіть на швидкісний інтернет!</h2>
+                                    <p class="mc-text mc-text-small" lang="isp_desc">Перехід зі збереженням номера безкоштовно!</p>
+                                    <div class="mc-button-group">
+                                        <a href="https://mnp.lifecell.ua/" target="_blank" rel="noopener" class="mc-btn mc-btn-yellow">Lifecell</a>
+                                        <a href="https://mnp.vodafone.ua/" target="_blank" rel="noopener" class="mc-btn mc-btn-red">Vodafone</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mc-decor-column">
+                                <div class="mc-bedrock-gui-card">
+                                    <div class="mc-bedrock-dialog">
+                                        <h3 class="mc-bedrock-dialog-title" lang="add_server_dialog_title">ДОБАВИТЬ НОВЫЙ СЕРВЕР</h3>
+                                        
+                                        <div class="mc-bedrock-field">
+                                            <label class="mc-bedrock-label" lang="lbl_server_name">Имя сервера</label>
+                                            <div class="mc-bedrock-input" id="bedrock-name-box">aeza</div>
+                                        </div>
+
+                                        <div class="mc-bedrock-field">
+                                            <label class="mc-bedrock-label" lang="lbl_server_address">Адрес сервера</label>
+                                            <div class="mc-bedrock-input" id="bedrock-ip-box">aezamine.com</div>
+                                        </div>
+
+                                        <div class="mc-bedrock-field">
+                                            <label class="mc-bedrock-label" lang="lbl_server_port">Порт</label>
+                                            <div class="mc-bedrock-input" id="bedrock-port-box">19132</div>
+                                        </div>
+
+                                        <div class="mc-bedrock-actions">
+                                            <button id="btn-bedrock-copy" class="mc-bedrock-btn mc-bedrock-btn-grey" lang="btn_copy_server">
+                                                Скопировать
+                                            </button>
+                                            <a href="minecraft://?addExternalServer=AézaMine|aezamine.com:19132" class="mc-bedrock-btn mc-bedrock-btn-green" lang="btn_add_and_play">
+                                                Добавить и играть
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="mc-how-to-play-box">
+                                        <h4 class="mc-subtitle" style="font-size:9.5px; color:var(--mc-accent); margin-bottom:6px;" lang="how_to_play_title">
+                                            📖 Как начать играть от А до Я
+                                        </h4>
+                                        <div class="mc-step-list">
+                                            <div class="mc-step-item">
+                                                <span class="mc-step-num">1</span>
+                                                <div class="mc-step-content">
+                                                    <strong class="mc-step-title" lang="step_1_title">1. Запуск игры</strong>
+                                                    <p class="mc-step-desc" lang="step_1_desc">Запустите Minecraft Bedrock (1.20 - 1.26+) на телефоне или ПК.</p>
+                                                </div>
+                                            </div>
+                                            <div class="mc-step-item">
+                                                <span class="mc-step-num">2</span>
+                                                <div class="mc-step-content">
+                                                    <strong class="mc-step-title" lang="step_2_title">2. Меню серверов</strong>
+                                                    <p class="mc-step-desc" lang="step_2_desc">Нажмите «Играть» ➔ вкладка «Серверы» ➔ «Добавить сервер».</p>
+                                                </div>
+                                            </div>
+                                            <div class="mc-step-item">
+                                                <span class="mc-step-num">3</span>
+                                                <div class="mc-step-content">
+                                                    <strong class="mc-step-title" lang="step_3_title">3. Ввод данных</strong>
+                                                    <p class="mc-step-desc" lang="step_3_desc">Введите aezamine.com и порт 19132 (или нажмите зелёную кнопку).</p>
+                                                </div>
+                                            </div>
+                                            <div class="mc-step-item">
+                                                <span class="mc-step-num">4</span>
+                                                <div class="mc-step-content">
+                                                    <strong class="mc-step-title" lang="step_4_title">4. Приятной игры</strong>
+                                                    <p class="mc-step-desc" lang="step_4_desc">Нажмите «Играть» или «Сохранить» и заходите на сервер сразу без регистрации!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="news" class="mc-pane">
+                        <div class="mc-pane-content">
+                            <div class="mc-section-header">
+                                <div>
+                                    <h2 class="mc-title" lang="news_tab">Новости</h2>
+                                    <p class="mc-text" lang="news_subtitle">Свежие обновления, вайпы и ивенты из нашего официального Telegram-канала</p>
+                                </div>
+                                <a id="tg-channel-link" href="https://t.me/aezamine_ru" target="_blank" rel="noopener" class="mc-btn mc-btn-blue mc-btn-small">
+                                    ✈️ <span lang="open_tg_channel">Канал в Telegram</span>
+                                </a>
+                            </div>
+
+                            <div class="mc-card mc-margin-top" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; background:linear-gradient(135deg, rgba(41,121,255,0.12), rgba(0,0,0,0.4)); border-color:rgba(41,121,255,0.3);">
+                                <div>
+                                    <h3 class="mc-subtitle" style="color:var(--mc-blue); margin-bottom:4px;">📢 @aezamine_ru</h3>
+                                    <p class="mc-text" style="font-size:9px;">Прямая трансляция постов, конкурсов и анонсов вайпов</p>
+                                </div>
+                                <a href="https://t.me/aezamine_ru" target="_blank" rel="noopener" class="mc-btn mc-btn-blue" style="font-size:9px; padding:8px 14px;">
+                                    Подписаться ✈️
+                                </a>
+                            </div>
+
+                            <div id="news-list-container" class="mc-news-container mc-margin-top"></div>
+                            
+                            <div id="news-loading-indicator" class="mc-news-skeleton-loader" style="display:none;">
+                                <div class="mc-skeleton-post"></div>
+                            </div>
+
+                            <button id="load-more-news" class="mc-btn mc-btn-green mc-margin-top" style="width: 100%" lang="load_more">
+                                Загрузить ещё новости
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="donate" class="mc-pane">
+                        <div class="mc-pane-content">
+                            <h2 class="mc-title" lang="buy_title">Покупка доната</h2>
+                            <p class="mc-text" lang="buy_description">Поддержите проект и получите уникальные возможности и привилегии навсегда.</p>
+                            
+                            <div class="mc-grid mc-grid-small">
+                                <a href="https://ru.aezamine.com" target="_blank" rel="noopener" class="mc-donate-card">
+                                    <span class="mc-donate-name">EasyDonate</span>
+                                    <span class="mc-donate-badge">РФ Карты / СБП</span>
+                                    <span class="mc-donate-price" lang="buy_sum">от 49₽</span>
+                                    <span class="mc-donate-period" lang="buy_sub_sum">навсегда</span>
+                                </a>
+                                <a href="https://aezamine.craftingstore.net" target="_blank" rel="noopener" class="mc-donate-card">
+                                    <span class="mc-donate-name">PayPal / Cards</span>
+                                    <span class="mc-donate-badge">International</span>
+                                    <span class="mc-donate-price" lang="buy_sum">от 0.49€</span>
+                                    <span class="mc-donate-period" lang="buy_sub_sum">навсегда</span>
+                                </a>
+                                <a href="https://aezamine.trademc.org" target="_blank" rel="noopener" class="mc-donate-card">
+                                    <span class="mc-donate-name">TradeMC</span>
+                                    <span class="mc-donate-badge">ЮMoney / Qiwi</span>
+                                    <span class="mc-donate-price" lang="buy_sum">от 49₽</span>
+                                    <span class="mc-donate-period" lang="buy_sub_sum">навсегда</span>
+                                </a>
+                                <a href="https://aezamine.cdonate.ru" target="_blank" rel="noopener" class="mc-donate-card">
+                                    <span class="mc-donate-name">CloudDonate</span>
+                                    <span class="mc-donate-badge">Быстрая оплата</span>
+                                    <span class="mc-donate-price" lang="buy_sum">от 49₽</span>
+                                    <span class="mc-donate-period" lang="buy_sub_sum">навсегда</span>
+                                </a>
+                                <a href="https://t.me/aezamine_bot?support=help" target="_blank" rel="noopener" class="mc-donate-card">
+                                    <span class="mc-donate-name">Monobank / Приват</span>
+                                    <span class="mc-donate-badge">Украина 🇺🇦</span>
+                                    <span class="mc-donate-price" lang="buy_sum">від 20₴</span>
+                                    <span class="mc-donate-period" lang="buy_sub_sum">навсегда</span>
+                                </a>
+                                <a href="http://t.me/send?start=IVor6ruK2Mma" target="_blank" rel="noopener" class="mc-donate-card">
+                                    <span class="mc-donate-name">Crypto Bot</span>
+                                    <span class="mc-donate-badge">USDT / TON / BTC</span>
+                                    <span class="mc-donate-price" lang="buy_sum">от $0.50</span>
+                                    <span class="mc-donate-period" lang="buy_sub_sum">навсегда</span>
+                                </a>
+                                <a href="http://t.me/aezamine_bot?buy" target="_blank" rel="noopener" class="mc-donate-card">
+                                    <span class="mc-donate-name">Telegram Stars</span>
+                                    <span class="mc-donate-badge">⭐ Звёзды TG</span>
+                                    <span class="mc-donate-price" lang="buy_sum">от 25 ⭐</span>
+                                    <span class="mc-donate-period" lang="buy_sub_sum">навсегда</span>
+                                </a>
+                                <a href="https://ru3.aezamine.com" target="_blank" rel="noopener" class="mc-donate-card">
+                                    <span class="mc-donate-name">PullPay</span>
+                                    <span class="mc-donate-badge">Резервная касса</span>
+                                    <span class="mc-donate-price" lang="buy_sum">от 49₽</span>
+                                    <span class="mc-donate-period" lang="buy_sub_sum">навсегда</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ranks-desc" class="mc-pane">
+                        <div class="mc-pane-content">
+                            <div class="mc-section-header">
+                                <div>
+                                    <h2 class="mc-title" lang="ranks_desc_title">Описание донат привилегий</h2>
+                                    <p class="mc-text" lang="ranks_desc_sub">Выберите привилегию, чтобы узнать все её команды, лимиты и возможности на сервере.</p>
+                                </div>
+                                <div class="mc-ranks-view-toggles">
+                                    <button id="btn-view-cards" class="mc-btn mc-btn-small active" lang="rank_view_cards">Карточки</button>
+                                    <button id="btn-view-compare" class="mc-btn mc-btn-small" lang="rank_view_compare">Сравнение</button>
+                                </div>
+                            </div>
+
+                            <div id="ranks-cards-view">
+                                <div id="ranks-list-container" class="mc-grid mc-margin-top"></div>
+                            </div>
+
+                            <div id="ranks-compare-view" style="display:none;" class="mc-margin-top">
+                                <div class="mc-compare-selectors">
+                                    <div class="mc-compare-select-box">
+                                        <span class="mc-label" lang="compare_rank_a">Привилегия 1:</span>
+                                        <select id="compare-select-1" class="mc-select"></select>
+                                    </div>
+                                    <div class="mc-compare-vs-badge">VS</div>
+                                    <div class="mc-compare-select-box">
+                                        <span class="mc-label" lang="compare_rank_b">Привилегия 2:</span>
+                                        <select id="compare-select-2" class="mc-select"></select>
+                                    </div>
+                                </div>
+                                <div id="ranks-compare-table-container" class="mc-compare-table-wrapper mc-margin-top"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="skin-viewer" class="mc-pane">
+                        <div class="mc-pane-content">
+                            <h2 class="mc-title" lang="skin_viewer_tab">3D Просмотрщик скинов</h2>
+                            <p class="mc-text" lang="skin_viewer_desc">Интерактивный 3D-рендер скина игрока с анимациями ходьбы, бега и свободным вращением.</p>
+                            
+                            <div class="mc-skin-layout mc-margin-top">
+                                <div class="mc-skin-viewport-card">
+                                    <div class="mc-skin-canvas-box">
+                                        <canvas id="skin-canvas" class="mc-skin-canvas"></canvas>
+                                        <div id="skin-loading" class="mc-skin-loader" style="display:none;">
+                                            <span>Загрузка скина...</span>
+                                        </div>
+                                    </div>
+                                    <div class="mc-skin-quick-actions">
+                                        <button id="skin-anim-walk" class="mc-btn mc-btn-small active" lang="skin_anim_walk">Ходьба</button>
+                                        <button id="skin-anim-run" class="mc-btn mc-btn-small" lang="skin_anim_run">Бег</button>
+                                        <button id="skin-anim-fly" class="mc-btn mc-btn-small" lang="skin_anim_fly">Полёт</button>
+                                        <button id="skin-anim-idle" class="mc-btn mc-btn-small" lang="skin_anim_idle">Стойка</button>
+                                        <button id="skin-anim-pause" class="mc-btn mc-btn-small mc-btn-yellow" lang="skin_anim_pause">Пауза</button>
+                                    </div>
+                                </div>
+
+                                <div class="mc-skin-controls-card">
+                                    <h3 class="mc-subtitle" lang="skin_search_title">Поиск по никнейму</h3>
+                                    <div class="mc-skin-input-group">
+                                        <input type="text" id="skin-input-nick" class="mc-input" placeholder="Никнейм игрока..." maxlength="24" value="Sony">
+                                        <button id="skin-search-btn" class="mc-btn mc-btn-green" lang="skin_btn_show">Показать</button>
+                                    </div>
+
+                                    <div class="mc-margin-top">
+                                        <span class="mc-label" lang="skin_presets_title">Популярные скины:</span>
+                                        <div class="mc-skin-presets mc-margin-top-sm">
+                                            <button class="mc-chip active" data-preset="Sony">Sony</button>
+                                            <button class="mc-chip" data-preset="AezaOwner">AezaOwner</button>
+                                            <button class="mc-chip" data-preset="Steve">Steve</button>
+                                            <button class="mc-chip" data-preset="Alex">Alex</button>
+                                            <button class="mc-chip" data-preset="Notch">Notch</button>
+                                            <button class="mc-chip" data-preset="Herobrine">Herobrine</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="mc-skin-toggles mc-margin-top">
+                                        <label class="mc-checkbox-label">
+                                            <input type="checkbox" id="skin-toggle-rotate" checked>
+                                            <span lang="skin_auto_rotate">Авто-вращение камеры</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="mc-skin-download-box mc-margin-top">
+                                        <a id="skin-download-btn" href="#" target="_blank" download="skin.png" class="mc-btn mc-btn-green" style="width:100%;">
+                                            💾 <span lang="skin_download_btn">Скачать скин</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rules" class="mc-pane">
+                        <div class="mc-pane-content">
+                            <h2 class="mc-title" lang="rules_tab">Правила</h2>
+                            <p class="mc-text" lang="rules_subtitle">Официальные правила игровых серверов AézaMine</p>
+                            <div id="rules-list-container"></div>
+                        </div>
+                    </div>
+
+                    <div id="staff" class="mc-pane">
+                        <div class="mc-pane-content">
+                            <h2 class="mc-title" lang="staff_tab">Команда</h2>
+                            
+                            <div class="mc-card mc-margin-top" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                                <p class="mc-subtitle" style="display:flex; align-items:center; gap:8px;">❤️ <span lang="staff_heart">Наша команда — сердце проекта</span></p>
+                                <p class="mc-text" lang="staff_desc">Благодаря им на серверах царит порядок и дружелюбная атмосфера.</p>
+                            </div>
+                            
+                            <div id="staff-list-container"></div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <div id="mc-toast-container" class="mc-toast-container"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Sony",
+    "rank": "ADMIN",
+    "date": "2023-09-01",
+    "activity": 98,
+    "warnings": 0
+  },
+  {
+    "name": "AezaOwner",
+    "rank": "ADMIN",
+    "date": "2023-10-15",
+    "activity": 95,
+    "warnings": 0
+  },
+  {
+    "name": "DevGamer",
+    "rank": "ADMIN",
+    "date": "2024-01-10",
+    "activity": 91,
+    "warnings": 0
+  },
+  {
+    "name": "AlexCraft",
+    "rank": "HELPER",
+    "date": "2024-04-12",
+    "activity": 88,
+    "warnings": 0
+  },
+  {
+    "name": "BedrockPro",
+    "rank": "HELPER",
+    "date": "2024-06-05",
+    "activity": 85,
+    "warnings": 1
+  },
+  {
+    "name": "CyberKnight",
+    "rank": "HELPER",
+    "date": "2024-08-20",
+    "activity": 79,
+    "warnings": 0
+  }
+]

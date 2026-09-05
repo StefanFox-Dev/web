@@ -1,0 +1,133 @@
+openapi: 3.1.0
+info:
+  title: AézaMine Web API
+  version: 1.0.0
+  description: High-performance TypeScript REST and WebSocket API for Minecraft Bedrock telemetry.
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+  - url: https://aezamine.com
+    description: Production gateway
+paths:
+  /api/v1/health:
+    get:
+      summary: Liveness and readiness health probe
+      responses:
+        '200':
+          description: Service is healthy and operational
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: UP
+                  uptimeSeconds:
+                    type: integer
+                  websocketClients:
+                    type: integer
+  /api/v1/status:
+    get:
+      summary: Get live Bedrock server monitoring status
+      parameters:
+        - name: lang
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [ru, uk, en]
+        - name: refresh
+          in: query
+          required: false
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Real-time server telemetry
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      online:
+                        type: boolean
+                      onlinePlayers:
+                        type: integer
+                      maxPlayers:
+                        type: integer
+                      latencyMs:
+                        type: integer
+                      minecraftVersion:
+                        type: string
+  /api/v1/ranks:
+    get:
+      summary: Retrieve list of privileges and perks
+      parameters:
+        - name: lang
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [ru, uk, en]
+      responses:
+        '200':
+          description: Catalog of ranks
+  /api/v1/ranks/{id}:
+    get:
+      summary: Retrieve specific rank details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Rank details
+        '404':
+          description: Rank not found
+  /api/v1/ranks/calculate:
+    post:
+      summary: Calculate upgrade cost between two ranks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [currentRank, targetRank]
+              properties:
+                currentRank:
+                  type: string
+                  example: VIP
+                targetRank:
+                  type: string
+                  example: ELITE
+      responses:
+        '200':
+          description: Upgrade price calculation
+  /api/v1/staff:
+    get:
+      summary: Get list of staff and helpers
+      responses:
+        '200':
+          description: Staff roster
+  /api/v1/rules:
+    get:
+      summary: Get server rules by categories
+      parameters:
+        - name: lang
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [ru, uk, en]
+      responses:
+        '200':
+          description: Server rules
